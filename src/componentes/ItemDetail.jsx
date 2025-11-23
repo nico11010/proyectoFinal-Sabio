@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const ItemDetail = ({ detalle }) => {
-  const { cart, addItem } = useContext(CartContext);
+  const { addItem, itemQuantity } = useContext(CartContext);
 
   const [purchase, setPurchase] = useState(false);
 
@@ -16,7 +16,7 @@ const ItemDetail = ({ detalle }) => {
     addItem(detalle, cantidad);
   };
 
-  console.log(cart);
+  const stockActualizado = detalle.stock - itemQuantity(detalle.id);
 
   return (
     <div className="d-flex flex-column justify-content-center align-items-center">
@@ -31,13 +31,13 @@ const ItemDetail = ({ detalle }) => {
           <Card.Title>{detalle.name}</Card.Title>
           <Card.Text>{detalle.description}</Card.Text>
           <Card.Text>Precio: ${detalle.price},00</Card.Text>
-          <Card.Text>Stock: {detalle.stock}</Card.Text>
+          <Card.Text>Stock: {stockActualizado}</Card.Text>
           {purchase ? (
             <Link className="btn btn-dark" to="/cart">
               Finalizar Compra
             </Link>
           ) : (
-            <ItemCount stock={detalle.stock} onAdd={onAdd} />
+            <ItemCount stock={stockActualizado} onAdd={onAdd} />
           )}
           <Link className="btn btn-dark" to="/">
             Volver atras
