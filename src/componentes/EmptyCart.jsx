@@ -6,9 +6,9 @@ const EmptyCart = () => {
     <div>
       <h1>El carrito esta Vacio!</h1>
       <h3>Revisa nuestros productos</h3>
-      <link className="btn btn-dark" to="/">
+      <Link className="btn btn-dark" to="/">
         Ir a Home
-      </link>
+      </Link>
     </div>
   );
 };
