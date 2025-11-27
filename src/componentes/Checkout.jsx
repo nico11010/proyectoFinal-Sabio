@@ -4,6 +4,10 @@ import { db } from "../service/firebase";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import EmptyCart from "./EmptyCart";
+import Card from "@mui/joy/Card";
+import CardContent from "@mui/joy/CardContent";
+import Typography from "@mui/joy/Typography";
+import Button from "@mui/joy/Button";
 
 const Checkout = () => {
   const [buyer, setBuyer] = useState({});
@@ -52,12 +56,45 @@ const Checkout = () => {
   return (
     <>
       {orderId ? (
-        <div>
-          <h2>Muchas Gracias por su compra!</h2>
-          <h4>Su orden es: {orderId}</h4>
-          <Link className="btn btn-dark" to="/">
-            Volver a Inicio
-          </Link>
+        <div
+          style={{
+            height: "100vh",
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Card
+            size="lg"
+            variant="outlined"
+            sx={{
+              minWidthwidth: "500px",
+              minHeightheight: "200px",
+              maxWidth: "90%",
+              padding: 3,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <CardContent sx={{ gap: 2 }}>
+              <Typography level="title-lg" sx={{ fontSize: "1.8rem" }}>
+                La Orden se ha realizado con exito!🙌{" "}
+              </Typography>
+              <Typography sx={{ fontSize: "1.5rem" }}>
+                Su nro de pedido es: {orderId}
+              </Typography>
+              <Typography sx={{ fontSize: "1.2rem" }}>
+                Muchas Gracias por su compra.
+              </Typography>
+              <Link to="/" style={{ textAlign: "center" }}>
+                <Button size="md" variant="solid" color="primary">
+                  Ir a Inicio!
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
         </div>
       ) : (
         <div>
