@@ -1,16 +1,59 @@
-# React + Vite
+# 📦 Proyecto de Ecommerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un proyecto desarrollado con **React**, **Vite** y **Firebase**, que permite listar productos, ver sus detalles, agregar items al carrito y finalizar la compra.  
+Incluye diseño con **MUI Joy UI**, navegación con **React Router**, y manejo global del carrito mediante **Context API**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![imageApp](/public/captura-readme.png)
 
-## React Compiler
+## 🚀 Tecnologías utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19**
+- **Vite**
+- **Firebase Firestore**
+- **React Router Dom**
+- **Context API**
+- **MUI Joy UI**
+- **Bootstrap / React-Bootstrap**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Instalación
+
+1. Clonar el repositorio:
+2. Entrar en la carpeta del proyecto: cd reac-coder
+3. Instalar las dependencias: npm install
+4. Iniciar el proyecto en modo desarrollo: npm run dev
+
+
+## 📁 Estructura del proyecto
+
+src/
+ ├── components/      # Componentes reutilizables
+ ├── context/         # Context API del carrito
+ ├── pages/           # Páginas con rutas
+ ├── service/         # Configuración de Firebase
+ ├── App.jsx
+ └── main.jsx
+
+## 🔥 Firebase
+
+El proyecto utiliza Firebase Firestore para:
+
+1. obtener productos del catálogo
+2. guardar órdenes en el checkout
+
+## Debes configurar tus credenciales en:
+
+- **src/service/firebase.js**
+
+## 🛒 Funcionalidades
+
+✔ Listado de productos
+✔ Vista de detalle
+✔ Carrito funcional (agregar, eliminar, vaciar)
+✔ Cálculo automático del total
+✔ Checkout con Firestore
+✔ Componentes estilizados con Joy UI
+✔ Navegación con React Router
