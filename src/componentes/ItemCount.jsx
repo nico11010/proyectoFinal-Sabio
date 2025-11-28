@@ -30,7 +30,9 @@ const ItemCount = ({ stock, onChangeCount }) => {
         >
           -
         </button>
-        <span className="btn">{count}</span>
+        <span className="btn" style={{ color: "white" }}>
+          {count}
+        </span>
         <button className="btn btn-dark" onClick={sumar}>
           +
         </button>

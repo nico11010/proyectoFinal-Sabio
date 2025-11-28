@@ -26,16 +26,15 @@ Incluye diseño con **MUI Joy UI**, navegación con **React Router**, y manejo g
 3. Instalar las dependencias: npm install
 4. Iniciar el proyecto en modo desarrollo: npm run dev
 
-
 ## 📁 Estructura del proyecto
 
-src/
- ├── components/      # Componentes reutilizables
- ├── context/         # Context API del carrito
- ├── pages/           # Páginas con rutas
- ├── service/         # Configuración de Firebase
- ├── App.jsx
- └── main.jsx
+- **src/**
+- **├── components/** # Componentes reutilizables
+- **├── context/** # Context API del carrito
+- **├── pages/** # Páginas con rutas
+- **├── service/** # Configuración de Firebase
+- **├── App.jsx**
+- **└── main.jsx**
 
 ## 🔥 Firebase
 
@@ -50,10 +49,10 @@ El proyecto utiliza Firebase Firestore para:
 
 ## 🛒 Funcionalidades
 
-✔ Listado de productos
-✔ Vista de detalle
-✔ Carrito funcional (agregar, eliminar, vaciar)
-✔ Cálculo automático del total
-✔ Checkout con Firestore
-✔ Componentes estilizados con Joy UI
-✔ Navegación con React Router
+1. ✔ Listado de productos
+2. ✔ Vista de detalle
+3. ✔ Carrito funcional (agregar, eliminar, vaciar)
+4. ✔ Cálculo automático del total
+5. ✔ Checkout con Firestore
+6. ✔ Componentes estilizados con Joy UI
+7. ✔ Navegación con React Router
